@@ -38,7 +38,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">WElcome to MMADB!</div>
+                <h1 class="title">Welcome to MMADB!</h1>
             </div>
         </div>
     </body>
