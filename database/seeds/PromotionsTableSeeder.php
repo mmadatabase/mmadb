@@ -2,13 +2,15 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder {
+class PromotionsTableSeeder extends Seeder {
     /**
      * Run the database seeds.
      *
      * @return void
      */
     public function run() {
-      $this->call(PromotionsTableSeeder::class);
+       DB::table('promotions')->insert([
+         'name' => 'UFC'
+     ]);
     }
 }
