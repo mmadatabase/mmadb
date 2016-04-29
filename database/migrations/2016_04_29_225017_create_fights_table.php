@@ -18,7 +18,6 @@ class CreateFightsTable extends Migration
             $table->integer('promotionID');
             $table->integer('fighterOneID');
             $table->integer('fighterTwoID');
-            $table->integer('fighterTwoID');
             $table->integer('rating');            
             $table->timestamps();
         });
