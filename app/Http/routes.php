@@ -23,6 +23,10 @@ Route::group(['prefix' => 'api/v1'], function () {
    Route::get('promotions/{id}/events', 'mmadb\api\EventController@getByPromotionID');
    
    Route::get('events/{id}', 'mmadb\api\EventController@getByID');
+   
+   Route::get('events/{id}/fights', 'mmadb\api\FightController@getByEventID');
+
+   Route::get('fights/{id}', 'mmadb\api\FightController@getByID');
 
    
 });
