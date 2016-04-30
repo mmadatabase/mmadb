@@ -63,9 +63,9 @@ class Reddit extends Controller {
             // TODO BETTER ERROR HANDLING
          }
       
-         try {
-            $user = User::where('username', $identity->name)->firstOrFail();
-         } catch (Exception $e) {
+         $user = User::where('username', $identity->name);
+         
+         if($user->count() < 1) {
             $user = new User;
             $user->username = $identity->name;
             $user->save();
