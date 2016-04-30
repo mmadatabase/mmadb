@@ -17,7 +17,7 @@ class CreateFightersTable extends Migration
             $table->string('firstName');
             $table->string('lastName');
             $table->string('nickname');
-            $table->enum('nicknamePosition', ['front', 'middle', 'end']);
+            $table->enum('nicknamePosition', ['', 'front', 'middle', 'end']);
             $table->timestamps();
         });
     }
