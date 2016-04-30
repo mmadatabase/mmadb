@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', ['redditurl' => "https://www.reddit.com/api/v1/authorize?client_id=" . env('REDDIT_CLIENT_ID') . "&response_type=code&state=login&redirect_uri=" . urlencode(env('REDDIT_URL')) . "&duration=permanent&scope=identity"]);
 });
 
 Route::get('/login/reddit', function () {

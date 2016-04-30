@@ -72,7 +72,7 @@ class Reddit extends Controller {
             $user->save();
          }
          
-         // TODO REDIRECT TO SUCCESS PAGE
-         // TODO API JSON
+         Auth::login($user);
+         return redirect('/');
    }
 }
