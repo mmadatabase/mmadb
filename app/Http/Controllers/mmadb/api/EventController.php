@@ -14,4 +14,9 @@ class EventController extends Controller {
         $event = Event::findOrFail($id);
         return json_encode($event);
     }
+
+    public function getByPromotionID($id) {
+        $events = Event::where('promotionID', $id)->get();
+        return $events->toJson();
+    }
 }
