@@ -19,4 +19,6 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'api/v1'], function () {
    Route::get('promotions/{id}', 'mmadb\api\PromotionController@getByID');
+   
+   Route::get('events/{id}', 'mmadb\api\EventController@getByID');
 });
