@@ -38,7 +38,18 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">WElcome to MMADB!</div>
+                <h1 class="title">Welcome to MMADB!</h1>
+                
+                <?php
+                  if (Auth::check()) {
+                     $user = Auth::user();
+                  ?><h1>Welcome Back <?php echo($user->username); ?></h1><?php
+                  } else {
+                  ?><a href="<?php echo($redditurl); ?>">Please Login Stranger!</a><?php     
+                  }
+               ?>
+                
+                <p></p>
             </div>
         </div>
     </body>
